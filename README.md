@@ -1,6 +1,6 @@
-# Ragnar Context Templates
+# Bounded Context Templates
 
-This is a Giter8 project template for an arbitrary Ragnar bounded context. Each bounded context is composed of 4 sub projects like this with several optional sub-projects beneath persistence:
+This is a Giter8 project template for an arbitrary bounded context. Each bounded context is composed of 4 sub projects like this with several optional sub-projects beneath persistence:
 
 - Context
 	- /Core
@@ -22,13 +22,15 @@ This structure ensures each contxt in Ragnar is actual it's own complete program
 
 Everything can be installed with brew
 
+But at this point you're probably asking what a bounded context is & why you should care. Bounded contexts are an idea from domain driven design that resolves around isolating a particular area of concern to a real-world problem & defining an object model just for that area of concern. This is actually incredibly simmilar to the Unix model of "do one thing well" and microservice systems, and this project makes it easy to build self-contained appliations that can be rolled up into a single larger appliation or kept seperate. 
+
 ## Procedure
 
 1. Clone this _giter8_ template
 
 	$ g8 leafme/ragnar_context
         package [com.domain]: me.leaf.ragnar
-        name [Ragnar Context]: ordering 
+        name [Bounded Context]: ordering 
 	context [My Sample Context]: ordering
         
         Template applied in ./ordering
