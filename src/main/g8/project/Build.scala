@@ -32,7 +32,7 @@ addCommandAlias("rebuild", ";clean; compile; package")
                                    biz,
                                    protocol)
 
-	lazy val biz = Project(id = "$context$-midgard",
+	lazy val biz = Project(id = "$context$-biz",
                               	settings = commonSettings,
                                  base = file("biz")) dependsOn (protocol)
   
@@ -82,7 +82,7 @@ addCommandAlias("rebuild", ";clean; compile; package")
       "com.typesafe"     % "config"          % TYPESAFE_CONFIG_VERSION,
       "org.slf4j"        % "slf4j-api"       % SLF4J_VERSION,
       "ch.qos.logback"   % "logback-classic" % LOGBACK_VERSION % "runtime",
-      "org.scalatest"   %% "scalatest"       % SCALATEST_VERSION % "test",
+      "org.scalatest"   %% "scalatest"       % SCALATEST_VERSION % "test"
     ),
 
     scalacOptions in Compile ++= Seq(
